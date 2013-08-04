@@ -176,6 +176,7 @@
     <Content Include="Generated\MobileServices.DevIntellisense.js" />
     <Content Include="Generated\MobileServices.Internals.js" />
     <Content Include="Generated\MobileServices.js" />
+    <Content Include="Generated\MobileServices.Node.js" />
     <Content Include="Generated\MobileServices.Web.Internals.js" />
     <Content Include="Generated\MobileServices.Web.js" />
     <Content Include="Internals\DevIntellisense.js" />
@@ -188,6 +189,7 @@
     <Content Include="MobileServices.intellisense.js" />
     <Content Include="MobileServices.priconfig.xml" />
     <Content Include="MobileServiceTable.js" />
+    <Content Include="Platforms\Platform.Node.js" />
     <Content Include="Platforms\Platform.Web.js" />
     <Content Include="Platforms\Platform.WinJS.js" />
     <Content Include="Transports\IframeTransport.js" />

@@ -11,3 +11,4 @@ map.txt
 .metadata
 sdk/android/src/sdk/libs/gson-2.2.2.jar
 sdk/android/test/sdk.testapp.tests/libs/gson-2.2.2.jar
+*.user

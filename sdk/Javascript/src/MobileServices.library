@@ -8,7 +8,8 @@ Please see the Microsoft.Azure.Zumo.Build project and the MergeJsModules build
 task for more details on the .library format and all of its options.
 -->
 <Library DefaultPath="Generated\MobileServices.js" 
-         WebPath="Generated\MobileServices.Web.js" 
+         WebPath="Generated\MobileServices.Web.js"
+         NodePath="Generated\MobileServices.Node.js"
          InternalsPath="Generated\MobileServices.Internals.js" 
          WebInternalsPath="Generated\MobileServices.Web.Internals.js" 
          IntellisensePath="Generated\MobileServices.DevIntellisense.js" 
@@ -16,7 +17,7 @@ task for more details on the .library format and all of its options.
          FileVersion="1.0.0.0">
   
   <!-- Add Resources  -->
-  <Resource Path="Strings\en-US\Resources.resjson" LanguageTag="en-US" Condition="Web|WebInternals" />
+  <Resource Path="Strings\en-US\Resources.resjson" LanguageTag="en-US" Condition="Web|WebInternals|Node" />
   <!--
   Note: InternalsVisible to has to be included before all of the other modules
   because it will cache the export generating functions - which will only work
@@ -33,16 +34,18 @@ task for more details on the .library format and all of its options.
   <Module Path="MobileServiceLogin.js" />
   <Module Path="Platforms\Platform.WinJS.js" Name="Platform" Condition="Default|Intellisense|Internals" />
   <Module Path="Platforms\Platform.Web.js" Name="Platform" Condition="Web|WebInternals" />
+  <Module Path="Platforms\Platform.Node.js" Name="Platform" Condition="Node" />
   <Module Path="Transports\DirectAjaxTransport.js" Condition="Web|WebInternals" />
   <Module Path="Transports\IframeTransport.js" Condition="Web|WebInternals" />
   <Module Path="LoginUis\BrowserPopup.js" Condition="Web|WebInternals" />
   <Module Path="LoginUis\CordovaPopup.js" Condition="Web|WebInternals" />
   <Module Path="Utilities\Extensions.js" />
   <Module Path="Utilities\PostMessageExchange.js" Condition="Web|WebInternals" />
-  <Module Path="Utilities\Promises.js" Condition="Web|WebInternals" />
+  <Module Path="Utilities\Promises.js" Condition="Web|WebInternals|Node" />
   <Module Path="Utilities\Validate.js"  />
   <Module Path="Internals\DevIntellisense.js" Condition="Intellisense" EntryPoint="true" />
   <!--  Add external modules -->
   <Module Path="External\queryjs\lib\*.js" />
   <Module Path="External\esprima\esprima.js" />
+  <Module Path="External\xmlhttprequest\lib\XMLHttpRequest.js" Condition="Node" />
 </Library>

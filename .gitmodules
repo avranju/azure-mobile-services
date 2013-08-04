@@ -4,3 +4,6 @@
 [submodule "sdk/Javascript/src/External/queryjs"]
 	path = sdk/Javascript/src/External/queryjs
 	url = https://github.com/WindowsAzure/queryjs.git
+[submodule "sdk/Javascript/src/External/xmlhttprequest"]
+	path = sdk/Javascript/src/External/xmlhttprequest
+	url = https://github.com/driverdan/node-XMLHttpRequest.git
